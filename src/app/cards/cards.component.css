@@ -1,6 +1,27 @@
 .planning-deck{
-
+    list-style: none;
+    text-align:center;
 }
 .planning-card{
-    
+    display: inline-block;
+    width:200px;
+    height:250px;
+    margin:10px;
+    background:#fff;
+    border-radius:5px;
+    box-shadow:5px 5px 20px -2px #000;
+    font-size:18px;
+    position:relative;
+}
+.planning-card span{
+    font-size: 6em;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 88px;
+    display: block;
+    line-height: 60px;
 }
