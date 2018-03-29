@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">Navbar</a>
+  <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="['active']" routerLink="/item1">item 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLinkActive]="['active']" routerLink="/item2">Item 2</a>
+      </li>
+      <li class="nav-item dropdown" ngbDropdown>
+        <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarDropdown" role="button" ngbDropdownToggle aria-haspopup="true" aria-expanded="false">
+          Item 3
+        </a>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <a class="dropdown-item" routerLink="/">Item 3.1</a>
+          <a class="dropdown-item" routerLink="/">Item 3.2</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/">Item 3.3</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Desativado</a>
+      </li>
+    </ul>
+  </div>
+</nav>
