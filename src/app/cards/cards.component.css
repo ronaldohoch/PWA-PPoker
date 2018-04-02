@@ -4,14 +4,15 @@
 }
 .planning-card{
     display: inline-block;
-    width:200px;
-    height:250px;
+    width:170px;
+    height:240px;
     margin:10px;
     background:#fff;
     border-radius:5px;
     box-shadow:5px 5px 20px -2px #000;
-    font-size:18px;
+    font-size:17px;
     position:relative;
+    cursor:pointer;
 }
 .planning-card span{
     font-size: 6em;
@@ -24,4 +25,18 @@
     height: 88px;
     display: block;
     line-height: 60px;
+}
+.planning-card .soft{
+    content:"";
+    position:absolute;
+    width:30px;
+    height:30px;
+}
+.planning-card .soft.top{
+    top:5px;
+    left:10px;
+}
+.planning-card .soft.bottom{
+    bottom:5px;
+    right:10px;
 }
