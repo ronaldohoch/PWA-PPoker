@@ -8,7 +8,7 @@ import { Card } from "./card";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Planning Poker - PWA';
+  title = 'Planning Poker PWA';
 
   constructor(private http: HttpClient) { }
 
