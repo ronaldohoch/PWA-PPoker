@@ -14,10 +14,10 @@
 
 <!-- <div class="card-big planning-deck {{showModal?'show':'hide'}}" *ngIf="showModal"> -->
 <div class="card-big planning-deck {{showModal?'hide':'show'}}">
-  <span class="card-close" (click)="closeCard()">X</span>
+  <span class="card-close {{showModal?'hide':'show'}}" (click)="closeCard()">X</span>
   <div class="container-card-big planning-card">
     <img src="/assets/images/icons/softdesign.svg" class="soft top">
-    <span>{{cardSelected.cardName}}</span>
+    <span *ngIf="!showModal">{{cardSelected.cardName}}</span>
     <img src="/assets/images/icons/softdesign.svg" class="soft bottom">
   </div>
 </div>
