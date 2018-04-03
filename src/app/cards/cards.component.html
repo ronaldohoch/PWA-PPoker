@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-12">
     <ul class="planning-deck">
-      <li class="planning-card" [ngClass]="{'selected':card.isSelected}" *ngFor="let card of cards" (click)="onSelectCard(card)">
+      <li class="planning-card card-{{card.cardName}}" *ngFor="let card of cards" (click)="onSelectCard(card)">
         <img src="/assets/images/icons/softdesign.svg" class="soft top">
         <span>
           {{card.cardName}}
@@ -9,5 +9,15 @@
         <img src="/assets/images/icons/softdesign.svg" class="soft bottom">
       </li>
     </ul>
+  </div>
+</div>
+
+<!-- <div class="card-big planning-deck {{showModal?'show':'hide'}}" *ngIf="showModal"> -->
+<div class="card-big planning-deck {{showModal?'hide':'show'}}">
+  <span class="card-close" (click)="closeCard()">X</span>
+  <div class="container-card-big planning-card">
+    <img src="/assets/images/icons/softdesign.svg" class="soft top">
+    <span>{{cardSelected.cardName}}</span>
+    <img src="/assets/images/icons/softdesign.svg" class="soft bottom">
   </div>
 </div>

@@ -1,11 +1,13 @@
 .planning-deck{
     list-style: none;
     text-align:center;
+    margin:0;
+    padding:0;
 }
 .planning-card{
     display: inline-block;
-    width:170px;
-    height:240px;
+    width:130px;
+    height:200px;
     margin:10px;
     background:#fff;
     border-radius:5px;
@@ -13,6 +15,7 @@
     font-size:17px;
     position:relative;
     cursor:pointer;
+    color:#969594;
 }
 .planning-card span{
     font-size: 6em;
@@ -24,6 +27,11 @@
     bottom: 0;
     height: 88px;
     display: block;
+    line-height: 60px;
+}
+.planning-card.card-100 span{
+    font-size: 3em;
+    height: 65px;
     line-height: 60px;
 }
 .planning-card .soft{
@@ -39,4 +47,58 @@
 .planning-card .soft.bottom{
     bottom:5px;
     right:10px;
+}
+
+.planning-deck.card-big{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.container-card-big.planning-card{
+    width: 90vw;
+    height: 95vh;
+}
+.container-card-big.planning-card span{
+    font-size:10em;
+}
+.container-card-big.planning-card .soft{
+    width:80px;
+    height:60px;
+}
+
+.card-close{
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    font-size: 1.2em;
+    border-radius: 100%;
+    background: #ad2624;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+}
+.card-big.planning-deck.hide{
+    transform:scale(0);
+    opacity:0;
+    transition: all 1ms cubic-bezier(0.4,0.2,0,1) 300ms;
+}
+.card-big.planning-deck.show{
+    transform:scale(1);
+    opacity:1;
+    transition: all 1ms cubic-bezier(0.4,0.2,0,1) 0ms;
+}
+/* .card-big.planning-deck .container-card-big{
+    transition: all 300ms cubic-bezier(0.4,0.2,0,1) 300ms;
+} */
+.card-big.planning-deck.hide .container-card-big{
+    transform:scale3d(0,0,0);
+    transition: all 300ms cubic-bezier(0.4,0.2,0,1) 0ms;
+}
+.card-big.planning-deck.show .container-card-big{
+    transform:scale3d(1,1,1);
+    transition: all 300ms cubic-bezier(0.4,0.2,0,1) 0ms;
 }

@@ -3,57 +3,46 @@ import { Card } from "./card";
 export const CARD: Card[] = [
     {
        "cardId":0,
-       "cardName":"0",
-       "isSelected":false
+       "cardName":"0"
     },
     {
        "cardId":1,
-       "cardName":"½",
-       "isSelected":false
+       "cardName":"½"
     },
     {
        "cardId":3,
-       "cardName":"1",
-       "isSelected":false
+       "cardName":"1"
     },
     {
        "cardId":4,
-       "cardName":"2",
-       "isSelected":false
+       "cardName":"2"
     },
     {
        "cardId":5,
-       "cardName":"3",
-       "isSelected":false
+       "cardName":"3"
     },
     {
        "cardId":6,
-       "cardName":"5",
-       "isSelected":false
+       "cardName":"5"
     },
     {
        "cardId":7,
-       "cardName":"8",
-       "isSelected":false
+       "cardName":"8"
     },
     {
        "cardId":8,
-       "cardName":"13",
-       "isSelected":false
+       "cardName":"13"
     },
     {
        "cardId":9,
-       "cardName":"20",
-       "isSelected":false
+       "cardName":"20"
     },
     {
        "cardId":10,
-       "cardName":"40",
-       "isSelected":false
+       "cardName":"40"
     },
     {
        "cardId":11,
-       "cardName":"100",
-       "isSelected":false
+       "cardName":"100"
     }
  ]
