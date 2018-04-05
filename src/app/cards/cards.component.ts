@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { NgIf } from '@angular/common';
 
+import { VibrationService } from "../services/vibration.service";
+
 import { Card } from "../card";
 import { CARD } from "../mock-card";
 
@@ -16,10 +18,12 @@ export class CardsComponent implements OnInit {
   cards = CARD;
   cardSelected = {};
   showModal = true;
+
   onSelectCard(planningCard): void{
     this.cardSelected = {};
     this.cardSelected = planningCard;
     this.showModal = false;
+    this.vibrationService.setVibrate();
   }
 
   closeCard(): void{
@@ -27,7 +31,7 @@ export class CardsComponent implements OnInit {
     this.showModal = true;
   }
 
-  constructor() { }
+  constructor(private vibrationService: VibrationService) { }
 
   ngOnInit() {
   }

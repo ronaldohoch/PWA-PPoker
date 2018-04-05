@@ -13,6 +13,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { CardsService } from './cards.service';
 import { CardsComponent } from './cards/cards.component';
+import { VibrationService } from './services/vibration.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { CardsComponent } from './cards/cards.component';
     HttpClientModule,
     NgbModule.forRoot()
   ],
-  providers: [CardsService],
+  providers: [CardsService, VibrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
